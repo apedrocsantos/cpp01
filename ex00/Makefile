@@ -5,6 +5,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = Zombie
 
 OBJS =	Zombie.cpp\
+		newZombie.cpp\
+		randomChump.cpp\
 		main.cpp\
 
 all: $(NAME)
