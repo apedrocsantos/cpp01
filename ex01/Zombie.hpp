@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 18:54:11 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/19 07:10:28 by anda-cun         ###   ########.fr       */
+/*   Created: 2023/11/18 18:50:50 by anda-cun          #+#    #+#             */
+/*   Updated: 2023/11/19 08:14:01 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+# ifndef __ZOMBIE_H__
+# define __ZOMBIE_H__
+
+# include <string>
 #include <iomanip>
 #include <iostream>
 #include <string>
 
-Zombie::Zombie(std::string name)
+class Zombie
 {
-    this->_name = name;
-    return;
-}
+    public:
+        Zombie(void);
+        ~Zombie(void);
+        void announce (void);
 
-void Zombie::announce(void)
-{
-    std::cout << this->_name << ": BraiiiiiiinnnzzzZ...\n";
-}
+    private:
+        std::string _name;
+};
 
-Zombie::~Zombie(void)
-{
-    std::cout << "Destroying " << this->_name << '\n';
-}
+# endif

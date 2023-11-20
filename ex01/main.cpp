@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 18:54:11 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/19 07:10:28 by anda-cun         ###   ########.fr       */
+/*   Created: 2023/11/18 19:12:39 by anda-cun          #+#    #+#             */
+/*   Updated: 2023/11/19 08:05:02 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iomanip>
-#include <iostream>
-#include <string>
+#include "Zombie.h"
 
-Zombie::Zombie(std::string name)
+int main()
 {
-    this->_name = name;
-    return;
-}
-
-void Zombie::announce(void)
-{
-    std::cout << this->_name << ": BraiiiiiiinnnzzzZ...\n";
-}
-
-Zombie::~Zombie(void)
-{
-    std::cout << "Destroying " << this->_name << '\n';
+    int i = 1;
+    // int nb = 10;
+    
+    Zombie *zombie = zombieHorde(10, "Manel");
+    // while (++i < nb)
+    // {
+        zombie[i].announce();
+        std::cout << i << '\n';
+    // }
 }
