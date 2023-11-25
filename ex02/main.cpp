@@ -5,24 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anda-cun <anda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 19:12:39 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/25 12:54:36 by anda-cun         ###   ########.fr       */
+/*   Created: 2023/11/25 13:39:08 by anda-cun          #+#    #+#             */
+/*   Updated: 2023/11/25 13:44:22 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#include <iostream>
+#include <string>
 
-int main()
-{
-    int i = -1;
-    int nb = 10;
+int main(void) {
+	std::string string = "HI THIS IS BRAIN";
+	std::string *stringPTR = &string;
+	std::string &stringREF = string;
 
-    Zombie *zombieH = zombieHorde(10, "Carlos");
-    while (++i < nb)
-    {
-        std::cout << i << ": ";
-        zombieH[i].announce();
-    }
-    delete [] zombieH;
-
+	std::cout << &string << "\t" << stringPTR << "\t" << &stringREF << "\n";
+	std::cout << string << "\t" << *stringPTR << "\t" << stringREF << "\n";
+	return (0);
 }

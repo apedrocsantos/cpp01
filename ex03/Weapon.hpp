@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anda-cun <anda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 19:12:39 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/25 12:54:36 by anda-cun         ###   ########.fr       */
+/*   Created: 2023/11/25 13:48:52 by anda-cun          #+#    #+#             */
+/*   Updated: 2023/11/25 13:52:20 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#ifndef __WEAPON_H__
+#define __WEAPON_H__
 
-int main()
-{
-    int i = -1;
-    int nb = 10;
+# include <string>
+#include <iomanip>
+#include <iostream>
+#include <string>
 
-    Zombie *zombieH = zombieHorde(10, "Carlos");
-    while (++i < nb)
-    {
-        std::cout << i << ": ";
-        zombieH[i].announce();
-    }
-    delete [] zombieH;
+class Weapon {
+	std::string type;
+public:
+	std::string const &getType(void);
+	void setType(std::string string);
+};
 
-}
+#endif
