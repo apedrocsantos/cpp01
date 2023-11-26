@@ -6,12 +6,13 @@
 /*   By: anda-cun <anda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 13:52:53 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/25 14:46:31 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/11/26 15:05:16 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 #include "Weapon.h"
+#include <iostream>
 
 Weapon::Weapon(std::string type) : _type(type) {
 	return;
@@ -22,5 +23,6 @@ std::string const &Weapon::getType(void) {
 }
 
 void Weapon::setType(std::string string) {
+	std::cout << "changing type to " << string << "\n";
 	this->_type = string;
 }

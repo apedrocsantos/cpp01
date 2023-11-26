@@ -2,12 +2,9 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Brain
+NAME = Sed
 
 OBJS =	main.cpp\
-		Weapon.cpp\
-		HumanA.cpp\
-		HumanB.cpp\
 
 all: $(NAME)
 

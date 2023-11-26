@@ -6,8 +6,10 @@
 /*   By: anda-cun <anda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 14:47:29 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/25 14:47:32 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/11/26 14:38:31 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.h"
+#include "HumanB.hpp"
+#include <iostream>
+#include <iomanip>

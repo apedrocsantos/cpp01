@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 13:48:52 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/25 15:07:42 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/11/26 15:04:48 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 #include <string>
 
-class Weapon {
+class Weapon
+{
 	std::string _type;
+
 public:
 	Weapon(std::string type);
 	std::string const &getType(void);
