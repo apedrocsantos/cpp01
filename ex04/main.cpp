@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anda-cun <anda-cun@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pedrosantos <pedrosantos@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 15:25:06 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/26 15:52:20 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/11/27 18:04:28 by pedrosantos      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,42 @@
 
 int main(int ac, char **av)
 {
+	int pos;
+	std::string filename;
+	std::string s1;
+	std::string s2;
+
+	pos = 0;
 	std::string line;
 	if (ac != 4)
 	{
 		std::cout << "invalid number of arguments. Try again.\n";
 		return 0;
 	}
-	std::ifstream ifs(av[1]);
+	filename = av[1];
+	s1 = av[2];
+	s2 = av[3];
+	std::ifstream ifs(filename);
+	std::ofstream ofs(filename.append(".replace"));
 	if (!ifs)
 	{
 		std::cout << "invalid file. Try again.\n";
 		return 0;
 	}
-	while (!ifs.eof())
-		std::cout << ifs.getline();
-	// 	std::getline(std::cin, line);
+	while (std::getline(ifs, line))
+	{
+		pos = line.find(av[2], 0);
+		while (pos != -1)
+		{
+			line.erase(pos, s1.length());
+			line.insert(pos, s2);
+			pos = line.find(s1, pos + 1);
+		}
+		ofs << line;
+		if (ifs.eof())
+			break;
+		ofs << "\n";
+	}
 	ifs.close();
-
+	ofs.close();
 }
