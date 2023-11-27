@@ -2,7 +2,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Filter
+NAME = harlFilter
 
 OBJS =	main.cpp\
 		Harl.cpp\
