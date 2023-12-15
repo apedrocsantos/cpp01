@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedrosantos <pedrosantos@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 15:25:06 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/27 18:04:28 by pedrosantos      ###   ########.fr       */
+/*   Updated: 2023/12/15 18:58:40 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ int main(int ac, char **av)
 	std::string filename;
 	std::string s1;
 	std::string s2;
-
-	pos = 0;
 	std::string line;
+
 	if (ac != 4)
 	{
 		std::cout << "invalid number of arguments. Try again.\n";
 		return 0;
 	}
+	pos = 0;
 	filename = av[1];
 	s1 = av[2];
 	s2 = av[3];

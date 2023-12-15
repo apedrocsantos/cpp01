@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedrosantos <pedrosantos@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:26:10 by pedrosantos       #+#    #+#             */
-/*   Updated: 2023/11/27 23:50:41 by pedrosantos      ###   ########.fr       */
+/*   Updated: 2023/12/15 19:20:31 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int main(int ac, char **av)
     Harl harl;
     std::string command;
     int index;
-    int i;
     
     index = 4;
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
@@ -28,15 +27,9 @@ int main(int ac, char **av)
     }
     command = av[1];
     std::transform(command.begin(), command.end(), command.begin(), ::toupper);
-    i = -1;
-    while (++i < 4)
-    {
-        if (!command.compare(levels[i]))
-        {
-            index = i;
-            break;
-        }
-    }
+    index = 0;
+    while (index < 4 && command.compare(levels[index]))
+        index++;
     switch(index)
     {
         case 0:
@@ -48,7 +41,7 @@ int main(int ac, char **av)
         case 3:
         {
             harl.complain(levels[3]);
-            break;   
+            break;
         }
         default:
             std::cout << "[ Probably complaining abount insignificant problems ]\n";

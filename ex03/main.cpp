@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anda-cun <anda-cun@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 14:38:23 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/26 15:20:36 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/12/15 18:53:17 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 		std::cout << &club << "\n";
 		HumanA bob("Bob", club);
 		bob.attack();
-		club.setType("gaita de foles");club.setType("gaita de foles");
+		club.setType("gaita de foles");
 		bob.attack();
 	}
 	{

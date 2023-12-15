@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pedrosantos <pedrosantos@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 18:10:10 by pedrosantos       #+#    #+#             */
-/*   Updated: 2023/11/27 23:48:52 by pedrosantos      ###   ########.fr       */
+/*   Updated: 2023/12/15 19:13:27 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,8 @@ void Harl::complain(std::string level) {
         if (!level.compare(levels[i]))
         {
             (this->*function_ptr[i])();
-            break;
+            return;
         }
     }
-    if (i == 4)
-        std::cout << "Error: wrong argument\n";
-    return;
+    std::cout << "Error: wrong argument\n";
 }

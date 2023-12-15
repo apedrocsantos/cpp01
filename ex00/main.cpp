@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 19:12:39 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/19 06:41:24 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/12/15 18:28:10 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-    Zombie *pedro = newZombie("pedro");
-    randomChump("AAA");
-    delete pedro;
+    Zombie *manel = newZombie("manel");
+    randomChump("carlos");
+    delete manel;
 }

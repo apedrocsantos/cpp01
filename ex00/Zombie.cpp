@@ -6,7 +6,7 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 18:54:11 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/11/19 07:10:28 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/12/15 18:28:42 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 Zombie::Zombie(std::string name)
 {
     this->_name = name;
+    std::cout << this->_name << "'s named constructor called\n";
     return;
 }
 
