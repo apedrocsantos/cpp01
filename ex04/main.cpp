@@ -6,14 +6,12 @@
 /*   By: anda-cun <anda-cun@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 15:25:06 by anda-cun          #+#    #+#             */
-/*   Updated: 2023/12/15 18:58:40 by anda-cun         ###   ########.fr       */
+/*   Updated: 2023/12/16 19:22:53 by anda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iomanip>
 #include <iostream>
 #include <fstream>
-#include <string>
 
 int main(int ac, char **av)
 {
@@ -41,12 +39,12 @@ int main(int ac, char **av)
 	}
 	while (std::getline(ifs, line))
 	{
-		pos = line.find(av[2], 0);
+		pos = line.find(s1, 0);
 		while (pos != -1)
 		{
 			line.erase(pos, s1.length());
 			line.insert(pos, s2);
-			pos = line.find(s1, pos + 1);
+			pos = line.find(s1, pos + s2.length());
 		}
 		ofs << line;
 		if (ifs.eof())
