@@ -39,7 +39,6 @@ void Harl::error(void) {
 void Harl::complain(std::string level) {
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     void (Harl::*function_ptr[]) (void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-    std::transform(level.begin(), level.end(), level.begin(), ::toupper);
     int i;
 
     i = -1;

@@ -2,13 +2,14 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
+
 NAME = Sed
 
-OBJS =	main.cpp\
+SRCS =	main.cpp\
 
 all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(SRCS)
 	$(CC) $(CFLAGS) $^ -o $(NAME) -g
 
 clean:

@@ -16,7 +16,7 @@
 int main(int ac, char **av)
 {
 	int pos;
-	std::string filename;
+	std::string infile;
 	std::string s1;
 	std::string s2;
 	std::string line;
@@ -27,11 +27,12 @@ int main(int ac, char **av)
 		return 0;
 	}
 	pos = 0;
-	filename = av[1];
+	infile = av[1];
 	s1 = av[2];
 	s2 = av[3];
-	std::ifstream ifs(filename);
-	std::ofstream ofs(filename.append(".replace"));
+	std::string outfile = infile + ".replace";
+	std::ifstream ifs(infile.c_str());
+	std::ofstream ofs((infile + ".replace").c_str());
 	if (!ifs)
 	{
 		std::cout << "invalid file. Try again.\n";

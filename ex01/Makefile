@@ -4,14 +4,17 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = MoarBrainz
 
-OBJS =	Zombie.cpp\
+SRCS =	Zombie.cpp\
 		zombieHorde.cpp\
 		main.cpp\
 
+HPPS =	Zombie.hpp\
+		Zombie.h\
+
 all: $(NAME)
 
-$(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $^ -o $(NAME) -g
+$(NAME) : $(SRCS) $(HPPS)
+	$(CC) $(CFLAGS) $(SRCS) -o $(NAME) -g
 
 clean:
 	rm -f $(NAME)

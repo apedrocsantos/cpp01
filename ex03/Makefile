@@ -4,14 +4,16 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = Attack
 
-OBJS =	main.cpp\
+SRCS =	main.cpp\
 		Weapon.cpp\
 		HumanA.cpp\
 		HumanB.cpp\
 
+HPPS =	HumanA.h
+
 all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(SRCS)
 	$(CC) $(CFLAGS) $^ -o $(NAME) -g
 
 clean:

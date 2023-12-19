@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
-#include "Weapon.h"
 #include <iostream>
 
 Weapon::Weapon(std::string type) : _type(type) {

@@ -12,7 +12,6 @@
 
 #include "Zombie.hpp"
 #include <string>
-#include <vector>
 
 Zombie *newZombie (std::string name);
 void randomChump (std::string name);

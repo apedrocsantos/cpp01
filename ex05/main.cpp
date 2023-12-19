@@ -15,10 +15,11 @@
 int main(void)
 {
     Harl harl;
-    harl.complain("debug");
+    harl.complain("DEBUG");
     harl.complain("INFO");
     harl.complain("WARNING");
     harl.complain("ERROR");
+    harl.complain("debug");
     harl.complain("debuga");
     harl.complain("aaaa");
     harl.complain("");

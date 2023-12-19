@@ -26,7 +26,6 @@ int main(int ac, char **av)
         return (0);
     }
     command = av[1];
-    std::transform(command.begin(), command.end(), command.begin(), ::toupper);
     index = 0;
     while (index < 4 && command.compare(levels[index]))
         index++;
@@ -34,10 +33,13 @@ int main(int ac, char **av)
     {
         case 0:
             harl.complain(levels[0]);
+            // Intentional fall-through
         case 1:
             harl.complain(levels[1]);
+            // Intentional fall-through
         case 2:
             harl.complain(levels[2]);
+            // Intentional fall-through
         case 3:
         {
             harl.complain(levels[3]);

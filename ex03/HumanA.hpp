@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __HUMANA_H__
-#define __HUMANA_H__
+#ifndef __HUMANA_HPP__
+#define __HUMANA_HPP__
 
-#include "Weapon.h"
+#include "Weapon.hpp"
+#include <iostream>
+#include <iomanip>
 
 class HumanA
 {
