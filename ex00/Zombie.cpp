@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <iomanip>
-#include <iostream>
-#include <string>
 
 Zombie::Zombie(std::string name)
 {

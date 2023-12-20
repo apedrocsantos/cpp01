@@ -14,6 +14,9 @@
 # define __ZOMBIE_H__
 
 # include <string>
+#include <iomanip>
+#include <iostream>
+#include <string>
 
 class Zombie
 {

@@ -11,10 +11,11 @@
 /* ************************************************************************** */
 
 
-#ifndef __HARL_H__
-#define __HARL_H__
+#ifndef __HARL_HPP__
+#define __HARL_HPP__
 
 #include <string>
+#include <iostream>
 
 class Harl {
     void debug(void);

@@ -14,6 +14,7 @@
 #define __WEAPON_H__
 
 #include <string>
+#include <iostream>
 
 class Weapon
 {
